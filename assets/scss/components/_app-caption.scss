@@ -1,0 +1,26 @@
+.caption-brand-logo{
+    margin: 0 0 0 1rem;
+    i{font-size: 1.8rem;}
+}
+
+.caption-info{
+    margin: 0;
+    text-align: center;
+}
+
+.caption-options{
+    margin: 0;
+    padding: 0;
+
+    li{display: inline;}
+
+    .bt-options{
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    .icon-plus.cross{
+        display: inline-block;
+        transform: rotate(45deg);
+    }
+}

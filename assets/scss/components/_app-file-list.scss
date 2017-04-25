@@ -1,0 +1,72 @@
+.project-list{
+    position: relative;
+    overflow: auto;
+    height: 100%;
+}
+
+.jstree-default{
+    .jstree-icon{
+        font-family: 'icomoon';
+        font-style: normal;
+        background-image: none;
+        &.jstree-ocl{
+            font-size: 0.8rem;
+            &:before{
+                content: '\e904';
+                display: inline-block;
+                transform: rotate(90deg);
+            }
+        }
+        &:empty{
+            width: 1.6rem;
+            height: 1.6rem;
+            &.jstree-themeicon-custom{
+                width: 2.4rem;
+                height: 2.4rem;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .jstree-leaf{
+        .jstree-icon{
+            &.jstree-ocl{
+                &:before{content: none;}
+            }
+        }
+    }
+
+    .jstree-closed{
+        .jstree-icon{
+            &.jstree-ocl{
+                &:before{
+                    transform: rotate(0deg)
+                }
+            }
+        }
+    }
+
+    .jstree-anchor{
+        font-size: 1.2rem;
+
+        &.jstree-clicked{
+            font-weight: bold;
+        }
+
+        &.jstree-hovered{
+            //background: red;
+        }
+    }
+
+    .jstree-wholerow-clicked{
+        background: none;
+    }
+
+    .jstree-wholerow-hovered{
+        background: none;
+    }
+
+    .jstree-container-ul .jstree-loading > .jstree-ocl{
+        background: none;
+    }
+}

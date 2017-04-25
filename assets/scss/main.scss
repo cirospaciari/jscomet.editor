@@ -1,0 +1,17 @@
+/* override icon-font-path value and include scss */
+$roboto-font-path: "../fonts/roboto/";
+$icons-font-path: "../fonts/material-design-icons/";
+
+// Google Fonts
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import "normalize";
+@import "materialize";
+
+@import "helpers";
+@import "themes";
+@import "codemirror-themes/_syntax-highlight.scss";
+
+@import "components/components";
+@import "template";

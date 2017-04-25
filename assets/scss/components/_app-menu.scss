@@ -1,0 +1,66 @@
+.menu-list{
+    margin: 0;
+    padding: 0;
+
+    & > li{
+        display: inline;
+        position: relative;
+
+        & > a{
+            font-size: 1.3rem;
+            line-height: 3rem;
+            padding: 0.5rem 1.5rem;
+
+            &:first-letter{text-decoration: underline;}
+        }
+    }
+
+    .dropdown-content{
+        width: auto !important;
+        top: inherit !important;
+        overflow: visible;
+        min-width: 20rem;
+
+        li{
+            line-height: 1rem;
+            min-height: 2.5rem;
+            position: relative;
+
+            &.divider{min-height: inherit;}
+
+            a{
+                white-space: nowrap;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                padding: 1.2rem 3.6rem;
+                position: relative;
+                text-transform: capitalize;
+
+                .icon-dropdown{
+                    width: 0.8rem;
+                    height: 0.9rem;
+                    right: 1rem;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    font-size: 0.8rem;
+                    position: absolute;
+
+                    &:before{
+                        position: relative;
+                        top: -0.2rem;
+                    }
+                }
+            }
+
+            .dropdown-multilevel{
+                transform: translateX(100%);
+                left: inherit;
+                right: 0;
+                top: 0 !important;
+                opacity: 1;
+
+            }
+        }
+    }
+}

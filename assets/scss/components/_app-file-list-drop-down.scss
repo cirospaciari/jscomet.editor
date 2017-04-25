@@ -1,0 +1,113 @@
+.vakata-context {
+    opacity: 1;
+    margin: 0;
+    display: none;
+    z-index: 999;
+    will-change: width, height;
+}
+
+.vakata-context,
+.vakata-context ul {
+    min-width: 14rem;
+    max-height: 65rem;
+    padding: 0;
+    border: none;
+    @extend .z-depth-1;
+    background-color: $dropdown-bg-color;
+}
+
+.vakata-context ul {
+}
+
+.vakata-context .vakata-context-right ul {}
+
+.vakata-context li {
+    clear: both;
+    color: $off-black;
+    cursor: pointer;
+    min-height: $dropdown-item-height;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+}
+
+.vakata-context li > a {
+    border-radius: 0;
+    text-shadow: none;
+
+    font-size: 1.4rem;
+    display: block;
+    line-height: 2.2rem;
+    padding: (($dropdown-item-height - 22) / 2) 1.8rem;
+
+}
+.vakata-context li > a:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    background-color: $dropdown-hover-bg-color;
+}
+.vakata-context li > a.vakata-context-parent {
+
+}
+.vakata-context li > a:focus {
+
+}
+.vakata-context .vakata-context-hover > a {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: $dropdown-hover-bg-color;
+}
+
+.vakata-context .vakata-context-separator{
+    min-height: 0;
+    height: 0.1rem;
+    display: block;
+    // background-color: color("grey", "lighten-2");
+}
+
+.vakata-context .vakata-context-separator > a,
+.vakata-context .vakata-context-separator > a:hover {
+    display: none;
+}
+.vakata-context .vakata-contextmenu-disabled a,
+.vakata-context .vakata-contextmenu-disabled a:hover {
+
+}
+.vakata-context li > a > i {
+    margin: 0 1rem 0 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    vertical-align: initial;
+    font-size: 1.4rem;
+}
+.vakata-context li > a > i:empty {
+    width: 1.4rem;
+    line-height: 1.4rem;
+}
+.vakata-context li > a .vakata-contextmenu-sep {
+    display: none;
+}
+.vakata-context .vakata-contextmenu-shortcut {
+
+}
+.vakata-context-rtl ul {
+
+}
+.vakata-context-rtl li > a.vakata-context-parent {
+
+}
+.vakata-context-rtl .vakata-context-separator > a {
+
+}
+.vakata-context-rtl .vakata-context-left ul {
+
+}
+.vakata-context-rtl li > a > i {
+
+}
+.vakata-context-rtl li > a .vakata-contextmenu-sep {
+
+}

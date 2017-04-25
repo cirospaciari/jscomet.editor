@@ -1,0 +1,158 @@
+[
+    {
+        "id":1,
+        "text":"myAwesomeProject",
+        "children":[
+            {
+                "id":2,
+                "text":"css",
+                "children":[
+                    {
+                        "id": 3,
+                        "text": "main.css",
+                        "type": "file"
+                    }
+                ]
+            },
+            {
+                "id":4,
+                "text":"fonts",
+                "children":[
+                    {
+                        "id": 5,
+                        "text": "Material-Design-Icons.eot",
+                        "type": "file"
+                    },
+                    {
+                        "id": 6,
+                        "text": "Material-Design-Icons.svg",
+                        "type": "file"
+                    },
+                    {
+                        "id": 7,
+                        "text": "Material-Design-Icons.ttf",
+                        "type": "file"
+                    },
+                    {
+                        "id": 8,
+                        "text": "Material-Design-Icons.woff",
+                        "type": "file"
+                    },
+                    {
+                        "id": 9,
+                        "text": "Material-Design-Icons.woff2",
+                        "type": "file"
+                    }
+                ]
+            },
+            {
+                "id":10,
+                "text":"js",
+                "children":[
+                    {
+                        "id": 11,
+                        "text": "app.js",
+                        "type": "file"
+                    },
+                    {
+                        "id": 12,
+                        "text": "component-1.js",
+                        "type": "file"
+                    },
+                    {
+                        "id": 13,
+                        "text": "component-2.js",
+                        "type": "file"
+                    }
+                ]
+            },
+            {
+                "id":14,
+                "text":"scss",
+                "children":[
+                    {
+                        "id": 15,
+                        "text": "helpers.scss",
+                        "type": "file"
+                    },
+                    {
+                        "id": 16,
+                        "text": "components.scss",
+                        "type": "file"
+                    },
+                    {
+                        "id": 17,
+                        "text": "layout.scss",
+                        "type": "file"
+                    },
+                    {
+                        "id": 18,
+                        "text": "main.scss",
+                        "type": "file"
+                    }
+                ]
+            },
+            {
+                "id":19,
+                "text":"vendor",
+                "children":[
+                    {
+                        "id": 20,
+                        "text": "jquery"
+                    },
+                    {
+                        "id": 21,
+                        "text": "owl-carousel-2"
+                    },
+                    {
+                        "id": 22,
+                        "text": "modernizr"
+                    },
+                    {
+                        "id": 23,
+                        "text": "normalize"
+                    }
+                ]
+            },
+            {
+                "id":24,
+                "text":"index.html",
+                "type":"file"
+            },
+            {
+                "id":25,
+                "text":"about.html",
+                "type":"file"
+            },
+            {
+                "id":26,
+                "text":"projects.html",
+                "type":"file"
+            },
+            {
+                "id":27,
+                "text":"contact.html",
+                "type":"file"
+            },{
+                "id":28,
+                "text":"index.html",
+                "type":"file"
+            },
+            {
+                "id":29,
+                "text":"about.html",
+                "type":"file"
+            },
+            {
+                "id":30,
+                "text":"projects.html",
+                "type":"file"
+            },
+            {
+                "id":31,
+                "text":"contact.html",
+                "type":"file"
+            }
+        ]
+    }
+]

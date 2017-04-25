@@ -1,0 +1,76 @@
+/*
+Error: Undefined variable: "$fontBold".
+        on line 9 of app/assets/scss/components_forms.scss
+
+4:     label {
+5:         margin:0;
+6:         padding:11px 16px 0 0;
+7:         font-size:1.4rem;
+8:         line-height:1.6rem;
+9:         font-weight: $fontBold;
+10:         color:$colorOne;
+11:     }
+12: 
+13:     fieldset {
+14:         margin-top: 0;
+
+Backtrace:
+app/assets/scss/components_forms.scss:9
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/script/tree/variable.rb:49:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/script/tree/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:412:in `run'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/1.9.1/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$fontBold\".\A         on line 9 of app/assets/scss/components_forms.scss\A \A 4:     label {\A 5:         margin:0;\A 6:         padding:11px 16px 0 0;\A 7:         font-size:1.4rem;\A 8:         line-height:1.6rem;\A 9:         font-weight: $fontBold;\A 10:         color:$colorOne;\A 11:     }\A 12: \A 13:     fieldset {\A 14:         margin-top: 0;"; }

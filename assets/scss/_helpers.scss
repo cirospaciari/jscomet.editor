@@ -1,0 +1,19 @@
+$colorBg: #f2f2f2;
+$colorFont: #797979;
+$colorFontNeutral: #9c9c9c;
+
+$FontColor: #585858;
+$FontColorTwo: #e8b41d;
+$FontWhite: #FFF;
+
+$ColorTwo: #ffcb08;
+$colorOne: #1b1d21;
+
+$fontLight: 300;
+$fontRegular: 400;
+$fontBold: 700;
+
+@mixin omega-reset($nth) {
+    &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+    &:nth-child(#{$nth}+1) { clear: none }
+}

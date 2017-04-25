@@ -1,0 +1,125 @@
+@mixin theme($theme, $chosen_color_1, $chosen_color_2) {
+    $color_lighten_1: lighten($chosen_color_1, 53%);
+    $color_lighten_2: lighten($chosen_color_1, 15%);
+    $color_lighten_3: desaturate($color_lighten_2, 60%);
+    $color_lighten_4: desaturate($color_lighten_2, 70%);
+
+    $color_darken_1: lighten($chosen_color_2, 5%);
+    $color_darken_2: lighten($chosen_color_2, 25%);
+    $color_darken_3: $chosen_color_2;
+    $color_darken_4: darken($chosen_color_1, 35%);
+
+    $color_neutral: desaturate(rgba($color_lighten_3, .4), 30%);
+
+    &.#{$theme}{
+        .menu-list li a, .modal-content, .modal .input-field input,
+        .modal .input-field select {
+            color: $color_lighten_1;
+        }
+
+        .bt-options:hover, .jstree-anchor.jstree-hovered{
+            color: $color_lighten_2;
+        }
+
+        .spinner-custom{
+            border-color: $color_lighten_3;
+        }
+
+        input[type=text]:focus:not([readonly]){
+            border-bottom-color: $color_lighten_2;
+            box-shadow: 0 1px 0 0 $color_lighten_2;
+        }
+
+        input[type=text]:focus:not([readonly]) + label{
+            color: $color_lighten_2;
+        }
+
+        .modal .btn{
+            background-color: $color_lighten_4
+        }
+
+        .jstree-anchor.jstree-clicked, .project-caption, .tab-trigger.active, .tab-trigger:hover{
+            color: $color_lighten_3;
+        }
+
+        .jstree-anchor, .jstree-ocl, .tab-trigger, .collection a.collection-item, .collection a.collection-item span,
+        .collection a.collection-item i, .modal-header{
+            color: $color_lighten_4;
+        }
+
+        .bt-options, .app-caption, .status-text li{
+            color: $chosen_color_1;
+        }
+
+        .code-column, .CodeMirror, .CodeMirror-linenumbers, .modal-footer form, .modal .modal-content{
+            background-color: $color_darken_4;
+        }
+
+        .tabs-container, .status-bar, .app-project-panel, .code-columns-container,
+        .menu-list li a:hover, .menu-list li a:focus, .dropdown-content li:hover,
+        .tabs-container .icon-cross, .modal{
+            background-color: $color_darken_3;
+        }
+
+        .app-caption, .app-menu, .menu-list .dropdown-content,
+        .collection a.collection-item:not(.active):hover{
+            background-color: $color_darken_1;
+        }
+
+        .vakata-context .vakata-context-separator, .dropdown-content li.divider{
+            background-color: $color_neutral;
+        }
+
+        .vakata-context li > a{
+            color: $color_darken_1;
+        }
+
+        .vakata-context .vakata-contextmenu-disabled a,
+        .vakata-context .vakata-contextmenu-disabled a:hover {
+            color: $color_neutral;
+        }
+
+        .tabs-container .indicator{
+            background: $color_lighten_3;
+        }
+
+        .ps-container{
+            > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
+                > .ps-scrollbar-y, > .ps-scrollbar-x {
+                    background-color: $color_darken_1;
+                }
+            }
+            &.ps-in-scrolling.ps-y, &.ps-in-scrolling.ps-x {
+                > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail{
+                    > .ps-scrollbar-y, > .ps-scrollbar-x {
+                            background-color: $color_darken_1;
+                    }
+                }
+            }
+
+            &:hover{
+                &.ps-in-scrolling.ps-y, &.ps-in-scrolling.ps-x{
+                    > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
+                        > .ps-scrollbar-y, > .ps-scrollbar-x {
+                            background-color: $color_darken_1;
+                        }
+                    }
+                }
+
+                > .ps-scrollbar-y-rail:hover, > .ps-scrollbar-x-rail:hover{
+                    &:hover{
+                        > .ps-scrollbar-y, > .ps-scrollbar-x {
+                            background-color: $color_darken_1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body{
+    @include theme(material, #00bcd4, #23393C);
+    @include theme(paraiso-dark, #875656, #1e1e21);
+    @include theme(yeti, #99761E, #392A0B);
+}

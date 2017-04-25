@@ -1,0 +1,156 @@
+@import "modal";
+@import "app-caption";
+@import "app-menu";
+@import "app-file-list";
+@import "app-file-list-drop-down";
+//@import "app-forms";
+@import "app-icons";
+
+//scrollbars
+.ps-container {
+    > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
+        background-color: transparent; //mouse dentro do container
+    }
+
+    > .ps-scrollbar-y-rail > .ps-scrollbar-y{width: 0.6rem;}
+
+    > .ps-scrollbar-x-rail > .ps-scrollbar-x{height: 0.6rem;}
+
+    &.ps-in-scrolling.ps-y, &.ps-in-scrolling.ps-x {
+        > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail   {
+            background-color: transparent; // ao arrastar
+        }
+    }
+
+    &:hover{
+        &.ps-in-scrolling.ps-y, &.ps-in-scrolling.ps-x {
+            > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
+                 background-color: transparent; // ao clicar
+            }
+        }
+
+        > .ps-scrollbar-y-rail:hover, > .ps-scrollbar-x-rail:hover {
+            background-color: transparent; //mouse over
+        }
+    }
+}
+
+.tree-view, .modal-content{position: relative;}
+
+
+.preloader-wrapper.x-small{
+    width: 2.2rem;
+    height: 2.2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: none;
+}
+
+.code-columns-container{}
+
+.tabs-container{
+    @extend .tabs;
+    background: initial;
+    overflow: hidden;
+
+    .tab-trigger{
+        @extend .tab;
+        text-transform: initial;
+        max-width: 20rem;
+        height: 4rem;
+        line-height: 4rem;
+        padding-left: 1rem;
+        padding-right: 1.4rem;
+        font-size: 1.2rem;
+        position: relative;
+
+        .icon-cross{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 2rem;
+            height: 2rem;
+            right: 0;
+            transition: (all, ease-in-out, .2s);
+            opacity: 0;
+
+            &:before{
+                font-size: 0.8rem;
+                width: 0.65rem;
+                height: 0.65rem;
+                line-height: 2rem;
+            }
+        }
+
+        &:hover .icon-cross{opacity: 1;}
+    }
+}
+
+.tab-target{
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+
+    &.active{z-index: 1;}
+}
+
+// .tabs{
+//     background: initial;
+//     overflow: hidden;
+//     .tab{
+//         text-transform: initial;
+//         max-width: 20rem;
+//         height: 4rem;
+//         line-height: 4rem;
+//         padding-left: 1rem;
+//         a{
+//             font-size: 1.2rem;
+//             position: relative;
+//             padding-right: 1.4rem;
+
+//             .icon-cross{
+//                 position: absolute;
+//                 top: 0;
+//                 bottom: 0;
+//                 margin: auto;
+//                 width: 2rem;
+//                 height: 2rem;
+//                 right: 0;
+//                 transition: (all, ease-in-out, .2s);
+//                 opacity: 0;
+
+//                 &:before{
+//                     font-size: 0.8rem;
+//                     width: 0.65rem;
+//                     height: 0.65rem;
+//                     line-height: 2rem;
+//                 }
+//             }
+
+//             &:hover .icon-cross{opacity: 1;}
+
+//         }
+//     }
+
+//     .indicator{
+
+//     }
+// }
+
+
+
+.status-bar{
+    .status-text {
+        margin: 0;
+        @extend .valign-wrapper;
+
+        li{
+            display: inline;
+            padding: 0 1.5rem;
+            font-size: 1.3rem;
+            @extend .valign;
+        }
+    }
+}

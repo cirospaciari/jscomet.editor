@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-br"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-br"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-br"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="pt-br"> <![endif]-->
+<!--[if gt IE 9]>      <html class="no-js" lang="pt-br"> <![endif]-->
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <title>Code Editor</title>
+
+
+    <!-- STYLES -->
+    <!-- build:css assets/css/vendor.min.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="assets/vendor/codemirror/lib/codemirror.css" />
+        <link rel="stylesheet" href="assets/vendor/jstree/dist/themes/default/style.css" />
+        <link rel="stylesheet" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css" />
+        <!-- endbower -->
+        <link rel="stylesheet" href="assets/vendor/codemirror/addon/scroll/simplescrollbars.css">
+    <!-- endbuild -->
+
+    <!-- build:css assets/css/main.min.css -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <!-- FALLBACKS -->
+    <!-- build:js assets/js/modernizr.min.js -->
+   <script src="assets/vendor/modernizr/modernizr.js"></script>
+   <!-- endbuild -->
+   <!-- build:js assets/js/fallbacks.min.js -->
+   <!--[if lt IE 9]>
+       <script src="assets/vendor/selectivizr/selectivizr.js"></script>
+       <script src="assets/vendor/ie7-js/src/ie9-css.js"></script>
+   <![endif]-->
+   <!-- endbuild -->
+</head>
+
+<body class="material">
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-header text-center">
+            Modal Header
+        </div>
+        <div id="scroll-left" class="modal-content left">
+            <div id="modal-tree-view" class="tree-view">
+                <ul>
+                    <li>Root node 1
+                        <ul>
+                            <li>Child node 1</li>
+                            <li>
+                                <a href="#">Child node 2</a>
+                                <ul>
+                                    <li>teste</li>
+                                    <li>teste</li>
+                                    <li>teste</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Root node 2
+                        <ul>
+                            <li>lichid</li>
+                            <li>lichid</li>
+                            <li>lichid</li>
+                        </ul>
+                    </li>
+                    <li>Root node 3
+                        <ul>
+                            <li>lichid</li>
+                            <li>lichid</li>
+                            <li>lichid</li>
+                        </ul>
+                    </li>
+                    <li>Root node 4
+                        <ul>
+                            <li>lichid</li>
+                            <li>lichid</li>
+                            <li>lichid</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="scroll-right" class="modal-content right">
+            <div class="collection">
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+                <a href="#!" class="collection-item"><i class="icon-world"></i>Project <span>Visual C#</span></a>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select class="validate">
+                            <option value="" selected>Choose the Location</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                       <label>Location</label>
+                     </div>
+                    <div class="input-field col s6">
+                        <input id="solution" type="text" class="validate">
+                        <label for="solution">Solution</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select class="validate">
+                            <option value="" selected>Choose the Solucion name</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                       <label>Solucion name</label>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <a href="#" class="modal-action modal-close waves-effect waves-light btn">Ok</a>
+                <a href="#" class="modal-action modal-close waves-effect waves-light btn">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <div class="app-content-header">
+            <div class="app-caption">
+                <p class="caption-brand-logo">
+                    <i class="icon-world"></i>
+                </p>
+
+                <p class="caption-info">File Name - /path/for/current/file - Code Editor</p>
+
+                <ul class="caption-options">
+                  <li><a class="bt-options" href="#"><i class="icon-less"></i></a></li>
+                  <li><a class="bt-options" href="#"><i class="icon-plus"></i></a></li>
+                  <li><a class="bt-options" href="#"><i class="icon-plus cross"></i></a></li>
+                </ul>
+            </div>
+
+            <nav class="app-menu">
+                <ul class="menu-list">
+                    <li>
+                        <a href="#" accesskey="f" class="dropdown-button" data-activates="menu-file">File</a>
+                        <ul id="menu-file" class="dropdown-content">
+                            <li><a href="#" id="add-tab" class="add-tab">New File</a></li>
+                            <li><a href="#modal1" class="modal-trigger">Open File</a></li>
+                            <li><a href="#">Open Folder</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Save</a></li>
+                            <li><a href="#">Save as</a></li>
+                            <li><a href="#">Save all</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Close tab</a></li>
+                            <li><a href="#">Close panel</a></li>
+                            <li><a href="#">Close window</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" accesskey="e" class="dropdown-button" data-activates="menu-edit">Edit</a></li>
+                        <ul id="menu-edit" class="dropdown-content">
+                            <li><a href="#">Undo</a></li>
+                            <li><a href="#">Redo</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Cut</a></li>
+                            <li><a href="#">Copy</a></li>
+                            <li><a href="#">Paste</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Bookmark</a></li>
+                            <li><a href="#">Go to line</a></li>
+                        </ul>
+                    <li>
+                        <a href="#" accesskey="v" class="dropdown-button" data-activates="menu-view">View</a>
+                        <ul id="menu-view" class="dropdown-content">
+                            <li><a href="#">Enter Full Screen</a></li>
+                            <li><a href="#">Enter Distraction Free Mode</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Increase font size</a></li>
+                            <li><a href="#">Decrease font size</a></li>
+                            <li><a href="#">Reset font size</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-button-custom" data-activates="menu-layout">
+                                <a href="#">layout<i class="icon-dropdown"></i></a>
+                                <ul id="menu-layout" class="dropdown-content dropdown-multilevel">
+                                    <li><a href="#" class="toggle-columns" data-column="1">1 Columns</a></li>
+                                    <li><a href="#" class="toggle-columns" data-column="2">2 Columns</a></li>
+                                    <li><a href="#" class="toggle-columns" data-column="3">3 Columns</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" accesskey="g" class="dropdown-button" data-activates="menu-find">Find</a>
+
+                        <ul id="menu-find" class="dropdown-content">
+                            <li><a href="#">Find</a></li>
+                            <li><a href="#">Find in next</a></li>
+                            <li><a href="#">Find in previous</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Replace</a></li>
+                            <li><a href="#">Replace next</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Quick find</a></li>
+                            <li><a href="#">Quick find all</a></li>
+                            <li><a href="#">Quick add next</a></li>
+                            <li><a href="#">Quick skip next</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Use selection for find</a></li>
+                            <li><a href="#">Use selection for replace</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Find in files</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" accesskey="p" class="dropdown-button" data-activates="menu-preferences">Preferences</a>
+
+                        <ul id="menu-preferences" class="dropdown-content">
+                            <li><a href="#">Browse Packages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Settings - Default</a></li>
+                            <li><a href="#">Settings - User</a></li>
+                            <li><a href="#">Settings - More</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Key Bindings - Default</a></li>
+                            <li><a href="#">Key Bindings - User</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Font</a></li>
+                            <li class="dropdown-button-custom" data-activates="menu-color-schemes">
+                                <a href="#">Color Scheme<i class="icon-dropdown"></i></a>
+                                <ul id="menu-color-schemes" class="dropdown-content dropdown-multilevel">
+                                    <li><a href="#" class="change-theme" data-theme="material">Material</a></li>
+                                    <li><a href="#" class="change-theme" data-theme="paraiso-dark">Paraiso Dark</a></li>
+                                    <li><a href="#" class="change-theme" data-theme="yeti">yeti</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-button-custom" data-activates="menu-syntax">
+                                <a href="#">Syntax<i class="icon-dropdown"></i></a>
+                                <ul id="menu-syntax" class="dropdown-content dropdown-multilevel">
+                                    <li><a href="#" class="changeSyntax" data-syntax="javascript">JavaScript</a></li>
+                                    <li><a href="#" class="changeSyntax" data-syntax="htmlmixed">Html Mixed</a></li>
+                                    <li><a href="#" class="changeSyntax" data-syntax="css">Css</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Package Settings</a></li>
+                            <li><a href="#">Package Control</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" accesskey="h" class="dropdown-button" data-activates="menu-help">Help</a>
+                        <ul id="menu-help" class="dropdown-content">
+                            <li><a href="#">View terms of use</a></li>
+                            <li><a href="#">View license</a></li>
+                            <li><a href="#">Version 1.0.0</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Release notes</a></li>
+                            <li><a href="#">Welcome guide </a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="app-content-body">
+            <aside id="app-project-panel" class="app-project-panel">
+                <div class="preloader-wrapper x-small active" id="jstree-loading">
+                    <div class="spinner-layer spinner-custom">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="project-list" class="project-list">
+
+                </div>
+            </aside>
+
+            <section class="app-work-space">
+                <main class="code-columns-container" id="code-columns-container">
+
+
+
+                </main>
+                <footer class="status-bar">
+                    <ul class="status-text">
+                        <li>Line: 27</li>
+                        <li>Columns: 1</li>
+                    </ul>
+
+                    <ul class="status-text">
+                        <li>LF</li>
+                        <li>UTF-8</li>
+                        <li>JavaScript</li>
+                        <li>Spaces: 4</li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <!-- build:js assets/css/vendor.min.js -->
+        <!-- bower:js -->
+        <script src="assets/vendor/jquery/dist/jquery.js"></script>
+        <script src="assets/vendor/codemirror/lib/codemirror.js"></script>
+        <script src="assets/vendor/jstree/dist/jstree.js"></script>
+        <script src="assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+        <!-- endbower -->
+        <script src="assets/vendor/Materialize/dist/js/materialize.js"></script>
+        <!--  codeMirror Syntax Highlight-->
+        <script src="assets/vendor/codemirror/mode/xml/xml.js"></script>
+        <script src="assets/vendor/codemirror/mode/javascript/javascript.js"></script>
+        <script src="assets/vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="assets/vendor/codemirror/mode/css/css.js"></script>
+
+        <!--  codeMirror Addons-->
+        <script src="assets/vendor/codemirror/addon/scroll/simplescrollbars.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js assets/js/main.min.js -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/ColumnsContainer.js"></script>
+    <script src="assets/js/Column.js"></script>
+    <script src="assets/js/TabsContainer.js"></script>
+    <script src="assets/js/Tab.js"></script>
+    <script src="assets/js/app.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js remove -->
+    <script src="//localhost:35729/livereload.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>
